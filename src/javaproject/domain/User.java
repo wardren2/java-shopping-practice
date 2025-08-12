@@ -15,4 +15,9 @@ public class User {
 
     public String getId() { return id; }
     public String getName() { return name; }
+
+    // 유효성 검증 메서드 추가 (버그 수정)
+    public boolean isValid() {
+        return id != null && !id.isEmpty() && password != null && password.length() >=6;
+    }
 }
